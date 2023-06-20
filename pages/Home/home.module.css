@@ -1,0 +1,25 @@
+.hero_section {
+    background-image: url(../../public/images/diaspo-impact-home-bg.jpg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    opacity: 80%;
+
+}
+
+.cardImage {
+    width: 500;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:600px) {
+    .cardImage {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .cardImage {
+        width: 400px;
+    }
+}
