@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section } from './Section'
+import { Section } from '../../../components/Section'
 import { Box, Typography, Button, Grid } from '@mui/material'
 import BoxCenter from './BoxCenter'
 import StyledImg from './StyledImg'

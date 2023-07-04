@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography, Container, Grid } from '@mui/material'
 import event1 from '../../../public/images/Cocktail-event-image.jpg'
 import EventCard from './EventCard'
-import { Section } from './Section'
+import { Section } from '../../../components/Section'
 
 
 export const Events = () => {
@@ -59,8 +59,6 @@ export const Events = () => {
                                 </Grid>
                             }
                             )
-
-
                         }
                     </Grid>
 

@@ -5,11 +5,13 @@ import { styled } from '@mui/material'
 
 export default function PartnerImage({ image, company_name }) {
     const StyledPartnerImage = styled(Image)({
-        borderRadius: '45%',
-        width: 180,
-        height: 180,
+        backgroundColor: 'red',
+        borderRadius: '50%',
+        width: 200,
+        height: 200,
         marginLeft: 2,
-        marginRight: 2
+        marginRight: 2,
+
     })
     return (
         <StyledPartnerImage src={image} alt={company_name} />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Grid, Container } from "@mui/material"
-import { Section } from './Section'
+import { Section } from '../../../components/Section'
 import EventHistoryCard from './EventHistoryCard'
 
 export default function EventHistory() {

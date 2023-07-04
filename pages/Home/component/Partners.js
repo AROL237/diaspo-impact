@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section } from './Section'
+import { Section } from '../../../components/Section'
 import StyledIconButton from './StyledIconButton'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -25,22 +25,33 @@ export default function Partners({ }) {
         },
     ]
     return (
-        <Section title={'our partners'} titlePosition={'center'} >
+        <Section title={'our partners'} titlePosition={'center'} sx={{
+            display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
+            px: 6
+        }}>
             <Stack
-                direction={'row'} spacing={'auto'}
-                py={3}
+                direction={'row'}
+                alignContent={'center'}
+                alignItems={'center'}
+                justifyContent={'space-between'}
+                py={5}
             >
                 <StyledIconButton bgcolor="#E6E6E6" >
                     <ArrowBackIosIcon size='large' />
                 </StyledIconButton>
-                <BoxCenter >
-
+                <Stack direction={'row'} spacing={'auto'}
+                    alignItems={'center'}
+                    py={4}
+                    width={'60%'}
+                    justifyContent={'space-between'}
+                >
                     {
                         partners.map((partner, index) => {
                             return <PartnerImage key={index} {...partner} />
-                        })
+                        }
+                        )
                     }
-                </BoxCenter>
+                </Stack>
                 <StyledIconButton bgcolor={"#E6E6E6"}  >
                     <ArrowForwardIosIcon size='large' />
                 </StyledIconButton>

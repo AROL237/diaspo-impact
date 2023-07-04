@@ -9,9 +9,9 @@ export default function Navbar() {
 
 
     return (
-        <AppBar position="fixed" color='transparent'
+        <AppBar position="fixed" color=''
             sx={{
-                bgcolor: 'white',
+
                 boxShadow: 'none',
                 paddingY: 2.5
             }}

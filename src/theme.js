@@ -16,14 +16,14 @@ const theme = createTheme({
             main: '#E6AD7F',
         },
         secondary: {
-            main: '#19857b',
+            main: '#E6E6E6',
         },
         error: {
             main: red.A400,
         },
         info: {
-            main: "#E6E6E6",
-        },
+            main: '#19857b',
+        }
     },
     typography: {
         fontFamily: roboto.style.fontFamily,

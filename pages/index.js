@@ -6,7 +6,9 @@ import { Home } from './Home'
 export default function index() {
     return (
         <>
-            <Home />
+            <div id='home'>
+                <Home />
+            </div>
         </>
     )
 }

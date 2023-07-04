@@ -4,7 +4,7 @@ import BoxCenter from './BoxCenter'
 
 export default function StyledIconButton({ children, handleClik, bgcolor }) {
     return (
-        <IconButton aria-label="" onClick={handleClik}  >
+        <IconButton aria-label="" onClick={handleClik} sx={{ px: 0 }}  >
             <BoxCenter
                 sx={{
                     bgcolor: bgcolor,
