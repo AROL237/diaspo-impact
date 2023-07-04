@@ -6,7 +6,7 @@ import { Box, Button, Link, Stack, Container, useMediaQuery, useTheme, IconButto
 import { CloseOutlined, Menu as MenuIcon } from '@mui/icons-material'
 import RegisterationForm from './RegisterationForm'
 
-export default function EventNavBar({ registertionHandler }) {
+export default function EventNavBar({ registertionHandler, }) {
     const navigation = ['events', 'about', 'faq', 'contact']
     const theme = useTheme()
     const device = useMediaQuery(theme.breakpoints.up('md'))
@@ -78,7 +78,7 @@ export default function EventNavBar({ registertionHandler }) {
                                         }
                                     </Stack>
                                     <Box justifyContent={"center"} alignContent={"center"} alignItems={'center'}>
-                                        <Button onClick={registertionHandler} variant='contained' color='primary'>
+                                        <Button onClick={(e) => setRegister(true)} variant='contained' color='primary'>
                                             Register now
                                         </Button>
                                         <RegisterationForm setRegister={setRegister} register={register} />

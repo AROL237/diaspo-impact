@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Section } from '../../../components/Section'
 import { Box, Button, Stack, Typography } from '@mui/material'
 import RegisterationForm from './RegisterationForm'
 
 export default function DescriptionSection({ description, registertionHandler }) {
+    const [register, setRegister] = useState(false)
     return (
         <Section title={"description"} titlePosition={"center"} color={"#D8C3C3"}>
             <Stack alignContent={"space-around"}
@@ -20,7 +21,7 @@ export default function DescriptionSection({ description, registertionHandler })
                         <Button variant='contained' onClick={registertionHandler} size='large' >
                             Take part
                         </Button>
-                        <RegisterationForm />
+                        <RegisterationForm register={register} setRegister={setRegister} />
                     </Box>
                 </Box>
 

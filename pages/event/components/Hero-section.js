@@ -6,11 +6,13 @@ import Image from 'next/image'
 import bg from '../../../public/images/event-page-hero-bg.png'
 import moment from 'moment/moment'
 import EventTimer from './EventTimer'
+import RegisterationForm from './RegisterationForm'
 
 export default function HeroSection({ name, description, full_description }) {
 
     const eventDate = moment("2023-07-04")
     const [counter, setCounter] = useState(0)
+    const [register, setRegister] = useState(false)
 
     return (
         <Box height={"70vh"} justifyContent={'center'} justifyItems={'center'} alignContent={"center"} mx={'auto'} >
@@ -38,9 +40,10 @@ export default function HeroSection({ name, description, full_description }) {
                     </Typography> */}
                 </Box>
                 <Box   >
-                    <Button size='large' variant='contained' color='primary'>
+                    <Button onClick={(e) => setRegister(true)} size='large' variant='contained' color='primary'>
                         take part
                     </Button>
+                    <RegisterationForm register={register} setRegister={setRegister} />
                 </Box>
                 <Box>
                     <Stack diriection='row' spacing={'auto'} justifyContent={'center'} alignItems={'center'}>
