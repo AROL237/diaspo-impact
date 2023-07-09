@@ -1,10 +1,9 @@
 import React from 'react'
 import { Section } from '../../../components/Section'
 import { Box, Typography, Button, Grid } from '@mui/material'
-import BoxCenter from './BoxCenter'
+import BoxCenter from '../../../components/BoxCenter'
 import StyledImg from './StyledImg'
 import aboutImage from "../../../public/images/about-page-image.jpg"
-import testimonyAvatar from "../../../public/images/diaspo-impact.jpg"
 import AvatarTestimony from './AvatarTestimony'
 
 export default function AboutUs() {
@@ -33,7 +32,7 @@ export default function AboutUs() {
 
     }
     return (
-        <Section title={"about us"} titlePosition='center' color={'#E6E6E6'}>
+        <Section title={"about us"} titlePosition='center' color={'#E6E6E6'} id={'about'}>
             <Box
                 sx={{
                     display: 'flex',
@@ -55,7 +54,7 @@ export default function AboutUs() {
                             display: 'flex',
                             flexDirection: "column",
                             gap: 3,
-                            width: 680,
+                            width: { sm: '100%', md: 680 },
                             px: 3
                         }}
                     >
@@ -63,7 +62,8 @@ export default function AboutUs() {
                         <Typography variant="h5" fontWeight={'bold'} color="initial">
                             {about.title}
                         </Typography>
-                        <Typography textAlign={'justify'} justifyContent={'center'} variant="subtitle1" color="initial">
+                        <Typography textAlign={'justify'} justifyContent={'center'}
+                            variant="body1">
                             {about.description}
                         </Typography>
                         <BoxCenter >
@@ -104,7 +104,7 @@ export default function AboutUs() {
                                 about.testimonies.map((item, index) => {
 
 
-                                    return <Grid item key={index}>
+                                    return <Grid item key={index} sm={12} md={6}>
                                         <AvatarTestimony {...item} />
                                     </Grid>
                                 })

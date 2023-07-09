@@ -1,7 +1,7 @@
 .hero_section {
     background-image: url(../../public/images/diaspo-impact-home-bg.jpg);
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 70vh;
     background-size: cover;
     opacity: 80%;
 

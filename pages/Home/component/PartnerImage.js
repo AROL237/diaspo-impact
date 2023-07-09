@@ -1,5 +1,5 @@
 import React from 'react'
-import BoxCenter from './BoxCenter'
+import BoxCenter from '../../../components/BoxCenter'
 import Image from 'next/image'
 import { styled } from '@mui/material'
 
@@ -9,8 +9,8 @@ export default function PartnerImage({ image, company_name }) {
         borderRadius: '50%',
         width: 200,
         height: 200,
-        marginLeft: 2,
-        marginRight: 2,
+        marginLeft: 1,
+        marginRight: 1,
 
     })
     return (

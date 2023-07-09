@@ -7,6 +7,8 @@ import EventHistory from './component/EventHistory'
 import AboutUs from './component/AboutUs'
 import Partners from './component/Partners'
 import Footer from '../footer/Footer'
+import Contact_us from '../../components/Contact_us'
+import Container from '@mui/material/Container'
 
 
 
@@ -20,6 +22,7 @@ export const Home = () => {
             <EventHistory />
             <AboutUs />
             <Partners />
+            <Contact_us />
             <Footer />
         </>
     )

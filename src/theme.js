@@ -22,11 +22,30 @@ const theme = createTheme({
             main: red.A400,
         },
         info: {
-            main: '#19857b',
-        }
+            main: '#96D9D9',
+        },
+        thirdColor: {
+            main: "#455757",
+        },
     },
     typography: {
         fontFamily: roboto.style.fontFamily,
+        body1: {
+
+            color: '#1E1E1E', letterSpacing: 0.5,
+            fontSize: 18
+        },
+        body2: {
+            color: '#1E1E1E',
+            fontSize: 16
+        },
+        subtitle1: {
+            color: '#4E3B3B',
+            fontSize: 18,
+        },
+        subtitle2: {
+            color: '#757575'
+        }
     },
 
 });

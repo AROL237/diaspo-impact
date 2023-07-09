@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, IconButton } from '@mui/material'
-import BoxCenter from './BoxCenter'
+import BoxCenter from '../../../components/BoxCenter'
 
 export default function StyledIconButton({ children, handleClik, bgcolor }) {
     return (

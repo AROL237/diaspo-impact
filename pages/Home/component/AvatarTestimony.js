@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Avatar } from '@mui/material'
+import { Box, Avatar, Typography } from '@mui/material'
 import StyledImg from './StyledImg'
-import BoxCenter from './BoxCenter'
+import BoxCenter from '../../../components/BoxCenter'
 
 export default function AvatarTestimony({ avatar, talk }) {
     return (
@@ -17,9 +17,9 @@ export default function AvatarTestimony({ avatar, talk }) {
                 height: 100,
                 borderRadius: "50%"
             }} image={avatar} alt={"avatar"} />
-            <blockquote>
-                <div>{talk}</div>
-            </blockquote>
+            <Typography variant='body2' maxWidth={360} component={'blockquote'} px={1} >
+                {talk}
+            </Typography>
         </BoxCenter>
     )
 }

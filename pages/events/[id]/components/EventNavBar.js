@@ -6,7 +6,7 @@ import { Box, Button, Link, Stack, Container, useMediaQuery, useTheme, IconButto
 import { CloseOutlined, Menu as MenuIcon } from '@mui/icons-material'
 import RegisterationForm from './RegisterationForm'
 
-export default function EventNavBar({ registertionHandler, }) {
+export default function EventNavBar({ name, id }) {
     const navigation = ['events', 'about', 'faq', 'contact']
     const theme = useTheme()
     const device = useMediaQuery(theme.breakpoints.up('md'))
@@ -19,14 +19,18 @@ export default function EventNavBar({ registertionHandler, }) {
     return (
         <AppBar position="fixed" color="transparent"
             sx={{
-                bgcolor: '#E6E6E6',
+                backdropFilter: "blur(20px)",
                 boxShadow: 'none',
-                paddingY: 2.5
+                paddingY: 1.5,
             }}
         >
             {
                 device ?
-                    <Toolbar >
+                    <Toolbar
+                        sx={{
+                            zIndex: 2,
+                        }}
+                    >
                         <Container maxWidth='xl'>
 
                             <Stack direction={'row'} spacing={'auto'} alignItems={"flex-start"} justifyContent={'center'} alignContent={'space-around'}>
@@ -81,8 +85,8 @@ export default function EventNavBar({ registertionHandler, }) {
                                         <Button onClick={(e) => setRegister(true)} variant='contained' color='primary'>
                                             Register now
                                         </Button>
-                                        <RegisterationForm setRegister={setRegister} register={register} />
-                                    </Box>
+                                        {register && <RegisterationForm name={name} setRegister={setRegister} register={register} />
+                                        }</Box>
                                 </Stack>
                             </Stack>
                         </Container>

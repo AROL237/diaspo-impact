@@ -29,7 +29,7 @@ export default function EventHistory() {
 
     ]
     return (
-        <Section title={"event History"} sx={{ p: 2 }} titlePosition='center'>
+        <Section title={"event History"} sx={{ p: 2 }} titlePosition='center' id={'event-history'}>
 
             <Box >
                 <Grid
@@ -46,10 +46,10 @@ export default function EventHistory() {
                     {events.map((event, index) => {
                         var color;
                         if (index % 2 === 0)
-                            color = "#9B9191"
+                            color = "#E6E6E6"
                         else
-                            color = '#477E7E'
-                        return <Grid key={index} lg={4} md={6} sm={12} justifyContent={'center'} item >
+                            color = '#A9E6BE'
+                        return <Grid key={index} xs={12} lg={4} md={6} sm={12} justifyContent={'center'} item >
                             <EventHistoryCard {...event} color={color} />
                         </Grid>
                     })}
